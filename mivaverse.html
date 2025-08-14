@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MivaVerse Landing</title>
+  <link rel="stylesheet" href="mivaverse.css" />
+  <script src="mivaverse.js" defer ></script>
+</head>
+<body>
+  <div class="container">
+    <img src="mivaverse 1.png" alt="MivaVerse Logo" class="logo" loading="lazy"/>
+
+    <div class="button-group">
+      <button onclick="openAuthModal()">Student</button>
+      <button onclick="alert('Lecturer login coming soon')" >Lecturer</button>
+      <button onclick="alert('Admin login coming soon')">Admin</button>
+      <button onclick="alert('Guest has limited access')">Guest (Limited Access)</button>
+    </div>
+  </div>
+
+  <!-- Choose Auth Modal -->
+  <div id="authModal" class="modal">
+    <span class="close" onclick="closeModal('authModal')">&times;</span>
+    <h2>Student Access</h2>
+    <button onclick="openModal('loginModal')" class="login">Login</button>
+    <button onclick="openModal('registerModal')" class="create-account">Create Account</button>
+  </div>
+
+ <!-- Register Modal -->
+  <div id="registerModal" class="modal">
+    <span class="close" onclick="closeModal('registerModal')">&times;</span>
+    <form id="registerForm">
+      <h2>Register</h2>
+      <input type="email" id="regEmail" placeholder="Miva Email" autocomplete="email" required />
+      <input type="password" id="regPassword" placeholder="Create Password" autocomplete="new-password" required />
+      <button type="submit" class="register">Register</button>
+      <p id="regError" class="error"></p>
+    </form>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <form id="loginForm">
+      <h2>Login</h2>
+      <input type="email" id="loginEmail" placeholder="Miva Email" autocomplete="email" required />
+      <input type="password" id="loginPassword" placeholder="Password" autocomplete="current-password" required />
+      <a type="submit" href="newstudent.html">Login</a>
+      <p id="loginError" class="error"></p>
+    </form>
+    <p><a href=""><strong>Forgot Password</strong></a></p>
+  </div>
+
+  <!-- Code Verification Modal -->
+  <div id="codeModal" class="modal">
+    <span class="close" onclick="closeModal('codeModal')">&times;</span>
+    <form id="verifyForm">
+      <h2>Verify Email</h2>
+      <input type="text" id="verificationCode" placeholder="Enter code from email" required />
+<button type="submit">Verify</button>
+    </form>
+  </div>
+</body>
+</html>

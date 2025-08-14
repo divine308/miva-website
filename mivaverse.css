@@ -1,0 +1,278 @@
+:root {
+  --blue: #0A2540;
+  --red: #E03C31;
+  --gold: #A1866F;
+  --light-blue: #7999DA;
+  --white: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--blue);
+  color: var(--white);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  padding: 2rem;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--white);
+}
+
+.button-group button:nth-child(1) { background-color: var(--red);
+  transition: transform 0.2s linear, box-shadow 0.2s ease-in-out;
+}
+
+.button-group button:hover:nth-child(1) {
+  background-color:#b41d15 ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.button-group button:active:nth-child(1) {
+  background-color:#f0534b ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+.button-group button:nth-child(2) { background-color: var(--gold); 
+  transition: transform 0.2s linear, box-shadow 0.2s ease-in-out;
+}
+
+.button-group button:hover:nth-child(2) {
+  background-color:#775f4a ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.button-group button:active:nth-child(2) {
+  background-color:#af9883 ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+.button-group button:nth-child(3) { background-color: var(--light-blue);
+  transition: transform 0.2s linear, box-shadow 0.2s ease-in-out;
+}
+
+.button-group button:hover:nth-child(3) {
+  background-color:#3a61af ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.button-group button:active:nth-child(3) {
+  background-color:#6083c9 ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.button-group button:nth-child(4) { background-color: var(--white); color: var(--blue);
+ transition: transform 0.2s linear, box-shadow 0.2s ease-in-out;
+}
+
+.button-group button:hover:nth-child(4) {
+  background-color:#f1f1f1 ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.button-group button:active:nth-child(4) {
+  background-color:#ffffff ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 350px;
+  color: var(--blue);
+  z-index: 10;
+}
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+ a {
+  text-decoration: none;
+  color:whitesmoke;
+  border-radius: 12px;
+  background-color: #0A2540;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  width: 50%;
+  margin: auto;
+  transition: transform 0.3s linear, box-shadow 0.3s ease-in-out
+}
+
+a:hover{
+  background-color:#003c77 ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+a:active {
+   background-color:#1a63ac ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.register {
+  color:whitesmoke;
+  border-radius: 12px;
+  background-color: #0A2540;
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  width: 50%;
+  margin: auto;
+  transition: transform 0.3s linear, box-shadow 0.3s ease-in-out
+}
+
+.register:hover {
+  background-color:#003c77 ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.register:active {
+   background-color:#1a63ac ;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.login {
+  color:whitesmoke;
+  border-radius: 12px;
+  background-color: #7999DA;
+  transition: transform 0.3s linear, box-shadow 0.3s ease-in-out
+}
+
+.login:hover {
+  background-color: #3b62b1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.login:active  {
+  background-color: #6f99ee;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.create-account {
+  color:whitesmoke;
+  border-radius: 12px;
+  background-color: #7999DA;
+  transition: transform 0.3s linear, box-shadow 0.3s ease-in-out
+}
+
+.create-account:hover {
+  background-color: #3b62b1;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+.create-account:active {
+  background-color: #6f99ee;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2)
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  margin: 1rem 0;
+  font-size: 1rem;
+}
+
+.error {
+  color: red;
+  font-size: 0.9rem;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--red);
+}
+
+@media screen and (min-width: 600px) {
+  .button-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button-group button {
+    flex: 1 1  45%;
+   margin: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* .button-group button {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  } */
+
+  .logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+}
